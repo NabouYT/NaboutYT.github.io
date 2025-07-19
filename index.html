@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Marcos Marcelo Da Silva Santos</title>
+    <!-- Inclui o CDN do Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para usar a fonte Inter e cores personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1', // Cor principal (índigo)
+                        secondary: '#4f46e5', // Cor secundária (índigo mais escuro)
+                        accent: '#a78bfa', // Cor de destaque (violeta claro)
+                        background: '#f8fafc', // Cor de fundo (azul claro)
+                        text: '#1e293b', // Cor do texto (azul escuro)
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para rolagem suave e alguns ajustes */
+        html {
+            scroll-behavior: smooth; /* Habilita rolagem suave para âncoras */
+        }
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição para hover */
+        }
+        .project-card:hover {
+            transform: translateY(-5px); /* Efeito de levantar no hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada no hover */
+        }
+    </style>
+</head>
+<body class="font-sans bg-background text-text">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#home" class="text-2xl font-bold text-primary rounded-md p-2 hover:bg-gray-100 transition-colors">
+                Marcos Marcelo
+            </a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-text hover:text-primary transition-colors font-medium rounded-md p-2 hover:bg-gray-100">Início</a></li>
+                <li><a href="#projetos" class="text-text hover:text-primary transition-colors font-medium rounded-md p-2 hover:bg-gray-100">Projetos</a></li>
+                <li><a href="#contato" class="text-text hover:text-primary transition-colors font-medium rounded-md p-2 hover:bg-gray-100">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Início/Sobre Mim -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white py-20 px-4 rounded-b-lg shadow-lg">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <!-- Imagem de perfil - substitua pela sua foto -->
+                    <img src="https://placehold.co/256x256/6366f1/ffffff?text=Sua+Foto" alt="Sua Foto de Perfil" class="w-full h-full object-cover">
+                </div>
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Olá, eu sou Marcos Marcelo Da Silva Santos</h1>
+                    <p class="text-xl md:text-2xl mb-8">
+                        Um Editor de Foto e Vídeo, Analista de Marketing e Programador Júnior Python/Web apaixonado por criar e inovar.
+                        Bem-vindo(a) ao meu portfólio!
+                    </p>
+                    <a href="#projetos" class="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Ver Meus Projetos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <section id="projetos" class="py-20 px-4 bg-gray-50 rounded-lg shadow-inner mt-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-primary mb-12">Meus Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Cartão de Projeto 1: Aly - Assistente Virtual Inteligente -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <!-- Imagem do projeto (pode ser um screenshot do assistente ou um ícone) -->
+                    <img src="https://placehold.co/400x250/a78bfa/ffffff?text=Assistente+Virtual" alt="Imagem do Projeto Assistente Virtual" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-text mb-2">Aly - Assistente Virtual Inteligente</h3>
+                    <p class="text-gray-600 mb-4">
+                        Desenvolvimento de um assistente virtual em Python com capacidades de conversação inteligente e navegação web em tempo real. A Aly utiliza um modelo de linguagem avançado (Llama3 via Ollama) para interpretar comandos e, quando necessário, executa web scraping (com Selenium) para buscar informações dinâmicas como hora atual e notícias.
+                        Este projeto demonstra minhas habilidades em **integração de IA, web scraping, automação, lógica de programação e tratamento de dados**.
+                    </p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-primary hover:underline font-medium">Ver Detalhes &rarr;</a>
+                        <!-- Adicione um link para o repositório do código no GitHub -->
+                        <a href="https://github.com/seu-usuario/seu-repositorio-aly" target="_blank" class="text-gray-500 hover:text-gray-700 transition-colors text-sm">Ver Código (GitHub)</a>
+                    </div>
+                </div>
+
+                <!-- Cartão de Projeto 2: Edição de Fotos -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <!-- Imagem do projeto de edição de fotos (ex: uma foto editada ou um antes/depois) -->
+                    <img src="https://placehold.co/400x250/6366f1/ffffff?text=Edicao+de+Fotos" alt="Imagem do Projeto de Edição de Fotos" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-text mb-2">Edição de Fotos Profissional</h3>
+                    <p class="text-gray-600 mb-4">
+                        Portfólio de trabalhos de edição de fotos, incluindo retoque, correção de cor, manipulação de imagem e criação de composições visuais impactantes. Demonstra minha proficiência em ferramentas como Adobe Photoshop e Lightroom.
+                    </p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-primary hover:underline font-medium">Ver Detalhes &rarr;</a>
+                        <!-- Adicione um link para o repositório ou galeria de fotos, se tiver -->
+                        <a href="https://behance.net/seu-usuario-fotos" target="_blank" class="text-gray-500 hover:text-gray-700 transition-colors text-sm">Ver Galeria (Behance)</a>
+                    </div>
+                </div>
+
+                <!-- Cartão de Projeto 3: Desenvolvimento de Website -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <!-- Imagem do projeto de website (ex: um screenshot do site ou um mockup) -->
+                    <img src="https://placehold.co/400x250/4f46e5/ffffff?text=Desenvolvimento+Web" alt="Imagem do Projeto de Desenvolvimento de Website" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-text mb-2">Desenvolvimento de Websites Responsivos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Criação de websites modernos e responsivos utilizando HTML, CSS (com Tailwind CSS) e JavaScript. Foco em usabilidade, design intuitivo e otimização para diferentes dispositivos.
+                    </p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-primary hover:underline font-medium">Ver Detalhes &rarr;</a>
+                        <!-- Adicione um link para o repositório do código, se tiver -->
+                        <a href="https://github.com/seu-usuario/seu-repositorio-website" target="_blank" class="text-gray-500 hover:text-gray-700 transition-colors text-sm">Ver Código (GitHub)</a>
+                    </div>
+                </div>
+
+                <!-- Adicione mais cartões de projeto conforme necessário -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-20 px-4 bg-background rounded-lg shadow-lg mt-8">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-4xl font-bold text-center text-primary mb-12">Entre em Contato</h2>
+            <form class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <div class="mb-6">
+                    <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Seu Nome Completo">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="seu.email@exemplo.com">
+                </div>
+                <div class="mb-6">
+                    <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Sua mensagem..."></textarea>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-text text-white py-8 mt-8 rounded-t-lg shadow-inner">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 Marcos Marcelo Da Silva Santos. Todos os direitos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <!-- Links para redes sociais - substitua pelos seus links -->
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
